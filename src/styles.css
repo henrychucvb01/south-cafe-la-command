@@ -3206,65 +3206,6 @@ tbody tr.selected-row {
 }
 
 
-function getPreviewDayName() {
-  const day = getPreviewDayNumber();
-
-  const names = {
-    1: "Monday",
-    2: "Tuesday",
-    3: "Wednesday",
-    4: "Thursday",
-    5: "Friday"
-  };
-
-  return names[day] || "Current Day";
-}
-
-function getExpectedFinishLineItems() {
-  const day = getPreviewDayNumber();
-
-  const items = [
-    "Daily Newton / Edison checks",
-    "Daily report review",
-    "Closing & Readiness"
-  ];
-
-  if (day === 1) {
-    items.push(
-      "Missing Meal Count Report",
-      "Previous-week meal count verification"
-    );
-  }
-
-  if (day === 2) {
-    items.push(
-      "Meal Plan for Ordering Calendar date range"
-    );
-  }
-
-  if (day === 3) {
-    items.push(
-      "Site Report — Order Status (Non-Dairy)"
-    );
-  }
-
-  if (day === 4) {
-    items.push(
-      "Orders edited, saved, and completed by 2:00 PM"
-    );
-  }
-
-  if (testMonthEnd) {
-    items.push(
-      "Monthly Physical Inventory"
-    );
-  }
-
-  return items;
-}
-
-const supervisorTestMode =
-  testDay !== "live" || testMonthEnd;
 
   .supervisor-pin-back {
     position: static;
