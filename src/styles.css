@@ -3204,13 +3204,7 @@ tbody tr.selected-row {
 .finish-line-submit.finish-line-ready:hover {
   background: #0f864b;
 }
-function getPreviewDayNumber() {
-  if (testDay === "live") {
-    return new Date().getDay();
-  }
 
-  return Number(testDay);
-}
 
 function getPreviewDayName() {
   const day = getPreviewDayNumber();
